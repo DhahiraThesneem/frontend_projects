@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Font Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Google Font Fraunces -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        letterSpacing: {
+          widest: '.25em'
+        },
+        extend: {
+          colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            'dark_cyan': 'hsl(158, 36%, 37%)',
+            'dark_cyan_darker': 'hsl(158, 36%, 27%)',
+            'cream': 'hsl(30, 38%, 92%)', 
+            'very_dark_blue': 'hsl(212, 21%, 14%)', 
+            'dark_grayish_blue': 'hsl(228, 12%, 48%)', 
+            'white': 'hsl(0, 0%, 100%)', 
+          },
+          fontSize: {
+            'xxs' : '0.65rem',
+            'xl-cus' : '1.375rem'
+          },
+          fontFamily: {
+            'sans': ["Montserrat", 'sans-serif'], //500,700
+            'serif' : ["Fraunces", 'serif'], //700
+          },
+          lineHeight: {
+            'extra-tight': '1',
+            '4': '1rem',
+            'relaxed-cus' : '1.75',
+            '12': '3rem,'
+          }
+        }
+      }
+    }
+  </script>
+   <style>
+    :root {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="bg-cream font-sans font-normal w-screen h-screen">
+  <main class="flex justify-center items-center w-full h-full">
+    <div class="flex flex-col md:flex-row justify-center 
+    items-center bg-white max-w-64 md:max-w-lg
+    rounded-lg">
+        <!-- <img class="md:w-64 md:h-128 w-64 h-128 md:rounded-l-lg rounded-t-lg"
+        src="./images/image-product-mobile.jpg" alt="Perfume"> -->
+        <img class="md:hidden w-64 h-128 rounded-t-lg"
+        src="./images/image-product-mobile.jpg" alt="Perfume">
+
+        <!-- Desktop image -->
+        <img class="hidden md:block md:w-64 md:h-128 md:rounded-l-lg"
+     src="./images/image-product-desktop.jpg" alt="Perfume">
+        <div class="px-4 py-4 md:px-7 md:py-6 flex flex-col space-y-3 md:space-y-4">
+          <h1 class="font-sans uppercase font-semibold text-xxs md:text-xs text-dark_grayish_blue tracking-widest leading-2">Perfume</h1>
+          <h2 class="font-serif font-bold text-xl-cus md:text-3xl leading-none md:leading-extra-tight text-very_dark_blue">Gabrielle Essence Eau De Parfum</h2>
+          <p class="font-sans text-xxs md:text-xs font-semibold text-dark_grayish_blue md:leading-relaxed-cus leading-relaxed-cus">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+          <div class="flex items-center space-x-4">
+            <p class="text-dark_cyan text-2xl md:text-3xl font-bold font-serif">$149.99</p>
+            <p class="line-through text-dark_grayish_blue text-xxs md:text-xs">$169.99</p>
+          </div>
+          <button class="flex justify-center items-center text-xxs md:text-xs 
+          font-bold py-3 bg-dark_cyan hover:bg-dark_cyan_darker
+          focus:outline-none
+        focus:ring focus:ring-dark_cyan w-full rounded-lg text-white">
+        <div class="flex space-x-2 items-center">
+          <img class="md:w-3 md:h-3 w-3 h-3" src="./images/icon-cart.svg" alt="cart">
+          <span>Add to Cart</span>
+        </div>
+           </button>
+        </div>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Dhahira Thesneem</a>.
+    </div>
+  </footer>
+  
+</body>
+</html>
