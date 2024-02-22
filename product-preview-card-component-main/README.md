@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Look the solution here](https://github.com/DhahiraThesneem/frontEnd-Mentor/tree/master/social-links-profile-main_tailwind)
-- Live Site URL: [Look my live site here](https://your-live-site-url.com)
+- Solution URL: [Look the solution here](https://github.com/DhahiraThesneem/frontend_projects/tree/main/product-preview-card-component-main)
+- Live Site URL: [Look my live site here](https://dhahirathesneem.github.io/frontend_projects/product-preview-card-component-main/)
 
 ## My process
 
