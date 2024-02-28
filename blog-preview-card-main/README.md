@@ -16,7 +16,7 @@ If you are new to tailwind CSS, you can follow this project how to set up tailwi
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -82,6 +82,8 @@ Users should be able to:
  ```
 
 We can custom any styles via tailwind.config.js or/and input.css
+
+One more challenge i have faces is because of node_modules build by tailwind css. I have deleted those generated node modules from my project.
 
 ### Continued development
 
