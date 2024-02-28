@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="./output.css" rel="stylesheet">
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-yellow w-screen h-screen font-custom">
+  <main class="w-full h-full flex justify-center items-center">
+    <div id="card" class="flex flex-col items-start rounded-xl border-2 
+    shadow-custom border-black md:max-w-72 max-w-64 p-4
+    bg-white space-y-4 ">
+      <div class="md:w-64 md:h-42 h-44-1">
+        <img class=" w-full h-full object-cover rounded-lg" src="./assets/images/illustration-article.svg" alt="">
+      </div>
+      
+      <div class="flex flex-col space-y-2 items-start">
+        <h2 class="font-custom bg-yellow rounded-md py-1.5 px-3 font-extrabold
+        text-xs">
+          Learning</h2>
+        <h2 class="text-xs font-custom font-bold">Published 21 Dec 2023</h2>
+      </div>
+      <h1 id="title" class="cursor-pointer hover:text-yellow font-extrabold font-custom text-sm">HTML & CSS foundations</h1>
+      <p class="text-grey text-xs">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      <div class="flex items-center space-x-2">
+        <img class="w-6 h-6" src="./assets/images/image-avatar.webp" alt="">
+        <h3 class="text-xs font-custom font-extrabold">Greg Hooper</h3>
+      </div>
+    </div>
+  </main>
+  
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">me_bee</a>.
+    </div>
+  </footer>
+  <script>
+    const card = document.getElementById('card');
+    const title = document.getElementById('title');
+
+title.addEventListener('click', function() {
+  card.classList.remove('shadow-custom');
+  card.classList.add('shadow-custom-hover');
+});
+
+title.addEventListener('mouseleave', function() {
+  card.classList.remove('shadow-custom-hover');
+  card.classList.add('shadow-custom');
+});
+  </script>
+</body>
+</html>

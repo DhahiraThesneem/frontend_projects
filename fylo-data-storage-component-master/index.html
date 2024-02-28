@@ -6,26 +6,94 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Fylo data storage component</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+   <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+         sm: '375px',
+         md: '768px',
+        },
+        backgroundSize: {
+          'auto': 'auto',
+          'cover': 'cover',
+          'contain': 'contain',
+        },
+        extend: {
+          backgroundImage: {
+            'mobile-background': "url('./images/bg-mobile.png ')", 
+            'desktop-background': "url('/images/bg-desktop.png')",
+          },
+          colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            'white': 'hsl(0, 0%, 100%)', 
+            'Pale_Blue': 'hsl(243, 100%, 93%)',
+            'Grayish_Blue': 'hsl(229, 7%, 55%)',
+            'Dark_Blue': 'hsl(228, 56%, 26%)',
+            'Very_Dark_Blue': 'hsl(229, 57%, 11%)',
+          },
+          fontSize: {
+           
+          },
+          fontFamily: {
+            'sans': ["Raleway", 'sans-serif'], //400,700
+          },
+          lineHeight: {
+         
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-
-  You’ve used 815 GB of your storage
-
-  185 GB Left
+<body class="bg-Very_Dark_Blue bg-mobile-background bg-50% bg-center 
+  bg-contain md:bg-desktop-background md:bg-bottom bg-no-repeat font-normal md:w-screen h-screen">
   
-  0 GB
-  1000 GB
+  <main class="flex flex-col md:flex-row justify-center items-center w-full h-full space-y-2">
+    <div class="grow-1 flex basis-80 rounded-tr-lg bg-Dark_Blue p-8">
+      <div class="p-4">
+        <div>
+          <img class='w-4 h-4' src="./images/logo.svg" alt="logo">
+        </div>
+        <div >
+          <div class="w-8 h-8 bg-Very_Dark_Blue p-1">
+            <img src="./images/icon-document.svg" alt="Document">
+          </div>
+          <div class="w-8 h-8 bg-Very_Dark_Blue p-1">
+            <img src="./images/icon-folder.svg" alt="Folder">
+          </div>
+          <div class="w-8 h-8 bg-Very_Dark_Blue p-1">
+            <img src="./images/icon-upload.svg" alt="Upload">
+          </div> 
+        </div>
+      </div>
+      
+    </div>
+    <div class="grow-1 md:grow-2 basis-80">
+      progress
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
